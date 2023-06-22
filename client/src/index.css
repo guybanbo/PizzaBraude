@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+
+
+body {
+
+  margin: 0;
+
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif  !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-link{
+  color: black !important  ;
+}
+h1{
+  font-size:  34px !important;
+}
+.flex-container{
+  display: flex !important;
+}
+.btn{
+  background-color:blue !important;
+  color: aliceblue !important;
+  font-size: large !important;
+}
+.fa-plus{
+  color: blue !important;
+}
+.fa-minus{
+color: red !important ;
+}
+
+input{
+  margin-top: 10px !important ;
+  box-shadow:  none !important;
+
+
+}
+.login {
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=1060&t=st=1687108820~exp=1687109420~hmac=9a0736a407200b45ff4b82a3ea3931d329890fe2af21e9ae7140fe63d2ce068f');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.registeration{
+  background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?w=1060&t=st=1687108820~exp=1687109420~hmac=9a0736a407200b45ff4b82a3ea3931d329890fe2af21e9ae7140fe63d2ce068f');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
