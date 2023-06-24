@@ -17,7 +17,6 @@ export default function HomeScreen() {
   useEffect(() => {
     dispatch(getAllProducts());
   }, [dispatch]);
-
   return (
     <div
       style={{
@@ -32,7 +31,7 @@ export default function HomeScreen() {
         ) : error ? (
           <Error error="Something went wrong" />
         ) : (
-          pizzas.map((pizza) => {
+          (Array.from(pizzas)).map((pizza) => {
             return (
               <div className="col-md-3 " key={pizza._id}>
                 <div>
