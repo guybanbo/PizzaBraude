@@ -15,7 +15,7 @@ export default function Pizza({ pizza }) {
     dispatch(Addtocart(pizza, quantity, varients));
   }
   return (
-    <div className="shadow-lg p-2 mb-5 bg-white rounded">
+    <div className="shadow-lg p-2 mb-5 bg-white rounded"   key={pizza._id}>
       <div onClick={handleShow}>
         <p style={{ fontSize: "2rem" }}>{pizza.name}</p>
         <img
