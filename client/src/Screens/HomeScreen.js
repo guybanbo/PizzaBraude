@@ -45,5 +45,5 @@ export default function HomeScreen() {
       </div>
     </div>
   );
-  console(pizzas);
+  console.log(pizzas);
 }
