@@ -32,6 +32,11 @@ const initialState = {
   loginUserReducer: {
     currentUser: currentUser,
   },
+  getALLProductsReducer: {
+    pizzas:[],
+    error: null,
+    loading:true,
+  },
 };
 const composeEnhancers = composeWithDevTools({});
 const store = legacy_createStore(
