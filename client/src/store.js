@@ -35,7 +35,7 @@ const initialState = {
   getALLProductsReducer: {
     pizzas:[],
     error: null,
-    loading:false,
+    loading:true,
   },
 };
 const composeEnhancers = composeWithDevTools({});
