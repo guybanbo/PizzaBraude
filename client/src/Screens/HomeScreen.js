@@ -30,8 +30,8 @@ export default function HomeScreen() {
           <Loading />
         ) : error ? (
           <Error error="Something went wrong" />
-        ) : (pizzas&&
-          pizzas.map((pizza) => {
+        ) :pizzas.length>0?
+          (pizzas.map((pizza) => {
             return (
               <div className="col-md-3 " key={pizza._id}>
                 <div>
@@ -40,7 +40,9 @@ export default function HomeScreen() {
               </div>
             );
           })
-        )}
+        ):(
+            <p>No pizzas.</p>
+          )})
       </div>
     </div>
   );
