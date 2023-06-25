@@ -2,7 +2,6 @@ export const getALLProductsReducer = (state = { pizzas: []}, action) => {
   switch (action.type) {
     case "GET_ALL_PRODUCTS_REQUEST":
       return {loading: true, ...state };
-
     case "GET_ALL_PRODUCTS_SUCCESS":
       return { pizzas: action.payload, loading: false };
 
