@@ -30,7 +30,7 @@ export default function HomeScreen() {
           <Loading />
         ) : error ? (
           <Error error="Something went wrong" />
-        ) :pizzas.length>0?
+        ) :pizzas && pizzas.length>0?
           (pizzas.map((pizza) => {
             return (
               <div className="col-md-3 " key={pizza._id}>
