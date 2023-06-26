@@ -32,7 +32,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
   dispatch({ type: "GET_USER_ORDERS_REQUEST" });
 
   try {
-    const response = await axios.post("/api/orders/getuserorders", {
+    const response = await axios.post("https://pizza-braude-server.vercel.app/api/orders/getuserorders", {
       email: currentUser.email,
     });
 
