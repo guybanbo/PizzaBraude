@@ -11,7 +11,7 @@ export const placeOrder = (OrderDetails) => async (dispatch, getState) => {
   try {
     const CheckEmail = currentUser != null && currentUser.email != null;
 
-    const response = await axios.post("/api/orders/placeorder", {
+    const response = await axios.post("https://pizza-braude-server.vercel.app/api/orders/placeorder", {
       address,
       email: CheckEmail ? currentUser.email : null,
       phoneNumber,
