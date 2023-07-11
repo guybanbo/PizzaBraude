@@ -10,7 +10,7 @@ import { registerUserReducer } from "./reducers/userReducer";
 import { loginUserReducer } from "./reducers/userReducer";
 import { placeOrderReducer } from "./reducers/orderReducer";
 import { getUserOrdersReducer } from "./reducers/orderReducer";
-
+// Combine multiple reducers into a single reducer
 const finalReducers = combineReducers({
   getALLProductsReducer: getALLProductsReducer,
   cartReducer: cartReducer,
@@ -19,12 +19,15 @@ const finalReducers = combineReducers({
   placeOrderReducer: placeOrderReducer,
   getUserOrdersReducer: getUserOrdersReducer,
 });
+// Retrieve cart items from localStorage, if available
 const cartItems = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
+// Retrieve current user from localStorage, if available
 const currentUser = localStorage.getItem("currentUser")
   ? JSON.parse(localStorage.getItem("currentUser"))
   : null;
+  // Define initial state of the Redux store
 const initialState = {
   cartReducer: {
     cartItems: cartItems,
@@ -39,6 +42,7 @@ const initialState = {
   },
 };
 const composeEnhancers = composeWithDevTools({});
+// Create the Redux store
 const store = legacy_createStore(
   finalReducers,
   initialState,

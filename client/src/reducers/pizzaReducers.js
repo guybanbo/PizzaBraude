@@ -3,6 +3,7 @@ export const getALLProductsReducer = (state = { pizzas: []}, action) => {
     case "GET_ALL_PRODUCTS_REQUEST":
       return {loading: true, ...state };
     case "GET_ALL_PRODUCTS_SUCCESS":
+      // Set the fetched pizzas and reset the loading state
       return { pizzas: action.payload, loading: false };
 
     case "GET_ALL_PRODUCTS_FAILURE":

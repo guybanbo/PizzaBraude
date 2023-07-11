@@ -1,10 +1,12 @@
 export const registerUserReducer = (state = {}, action) => {
   switch (action.type) {
     case "USER_REGISTER_REQUEST":
+      // Set loading state when registering a user
       return {
         loading: true,
       };
     case "USER_REGISTER_SUCCESS":
+       // Set success state when user registration is successful
       return {
         loading: false,
         success: true,
@@ -26,6 +28,7 @@ export const loginUserReducer = (state = {}, action) => {
         loading: true,
       };
     case "USER_LOGIN_SUCCESS":
+       // Set success state and current user when login is successful
       return {
         loading: false,
         success: true,

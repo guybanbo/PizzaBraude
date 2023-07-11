@@ -1,15 +1,18 @@
 export const placeOrderReducer = (state = {}, action) => {
   switch (action.type) {
     case "PLACE_ORDER_REQUEST":
+      // Set loading state when placing an order
       return {
         loading: true,
       };
     case "PLACE_ORDER_SUCCESS":
+      // Set success state when order placement is successful
       return {
         loading: false,
         success: true,
       };
     case "PLACE_ORDER_FAILED":
+      // Set error state when order placement fails
       return {
         loading: false,
         error: action.payload,
@@ -27,6 +30,7 @@ export const getUserOrdersReducer = (state = { oredrs: [] }, action) => {
         ...state,
       };
     case "GET_USER_ORDERS_SUCCESS":
+       // Set user orders when fetching is successful
       return {
         loading: false,
         orders: action.payload,

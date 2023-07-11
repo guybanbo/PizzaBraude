@@ -16,6 +16,7 @@ function App() {
       <Navbar />
 
       <BrowserRouter>
+      {/* Define routes for different screens */}
         <Routes>
           <Route path="/" exact Component={HomeScreen} />
           <Route path="/cart" exact Component={Cartscreen} />

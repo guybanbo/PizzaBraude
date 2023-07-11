@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 export default function Checkout() {
+  // Define state variables for card details
   const [cardNumber, setCardNumber] = useState("");
   const [expMonth, setExpMonth] = useState("");
   const [expYear, setExpYear] = useState("");
   const [cvc, setCvc] = useState("");
-
+  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
   };

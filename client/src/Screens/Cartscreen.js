@@ -9,6 +9,7 @@ import Modal from "react-modal";
 export default function Cartscreen() {
   const cartState = useSelector((state) => state.cartReducer);
   const cartItems = cartState.cartItems;
+  // Calculate the subtotal by summing up the prices of all items in the cart
   var subtotal = cartItems.reduce((x, item) => x + item.price, 0);
   const dispatch = useDispatch();
   return (

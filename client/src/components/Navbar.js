@@ -20,6 +20,7 @@ export default function Navbar() {
         <div className="collapse show navbar-collapse  " id="navbarNav">
           <ul className="navbar-nav " style={{ marginLeft: "auto" }}>
             {currentUser ? (
+              // Dropdown for logged-in user
               <div
                 className="dropdown"
                 style={{ marginTop: "0.2cm", marginRight: "0.2cm" }}
@@ -54,6 +55,7 @@ export default function Navbar() {
                 </div>
               </div>
             ) : (
+              // Display login option if user is not logged in
               <li className="nav-item active">
                 <a className="nav-link" href="/login">
                   <h2>Login</h2> <span className="sr-only"></span>

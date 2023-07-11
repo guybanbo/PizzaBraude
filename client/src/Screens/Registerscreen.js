@@ -11,11 +11,13 @@ export default function Registerscreen() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [cpassword, setcpassword] = useState("");
+  // Retrieve register state
   const registerState = useSelector((state) => state.registerUserReducer);
   const { error, loading, success } = registerState;
 
   const dispatch = useDispatch();
   function register() {
+    // Validate the form fields
     if (
       password.length === 0 ||
       cpassword.length === 0 ||
@@ -30,6 +32,7 @@ export default function Registerscreen() {
         }
       });
     } else {
+      // Check if the password and confirm password match
       if (password != cpassword) {
         Swal.fire({
           icon: "error",
@@ -44,6 +47,7 @@ export default function Registerscreen() {
           email,
           password,
         };
+        // Dispatch an action to register the user
         dispatch(registerUser(user));
       }
     }

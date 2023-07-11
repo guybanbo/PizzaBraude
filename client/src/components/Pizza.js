@@ -4,13 +4,15 @@ import { useDispatch, useSelector } from "react-redux"; // Add this import
 import { Addtocart } from "../actions/cartAction";
 
 export default function Pizza({ pizza }) {
+  // State variables
   const [quantity, setQuantity] = useState(1);
   const [varients, setVarients] = useState("small");
   const [show, setShow] = useState(false);
+  // Functions to close/open the product description popup
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
-
+// Function to add a product to the cart
   function addtocart() {
     dispatch(Addtocart(pizza, quantity, varients));
   }

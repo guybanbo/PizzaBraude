@@ -10,10 +10,10 @@ import Error from "../components/Error";
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
-
+  // Retrieve pizzas state from Redux store
   const pizzasstate = useSelector((state) => state.getALLProductsReducer);
   const { pizzas, error, loading } = pizzasstate;
-
+  // Dispatch an action to fetch all products (pizzas)
   useEffect(() => {
     dispatch(getAllProducts());
   }, [dispatch]);
@@ -31,6 +31,7 @@ export default function HomeScreen() {
         ) : error ? (
           <Error error="Something went wrong" />
         ) :Array.isArray(pizzas) && pizzas.length>0?
+          // Render each pizza as a component
           (pizzas.map((pizza) => {
             return (
               <div className="col-md-3 " key={pizza._id}>
@@ -41,6 +42,7 @@ export default function HomeScreen() {
             );
           })
         ):(
+            // Display a message if there are no pizzas available
             <p>No pizzas.</p>
           )})
       </div>

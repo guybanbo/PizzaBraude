@@ -7,9 +7,11 @@ import Success from "../components/Success";
 
 export default function Ordersscreen() {
   const dispatch = useDispatch();
+  // Retrieve orders state
   const orderstate = useSelector((state) => state.getUserOrdersReducer);
   const { orders, error, loading } = orderstate;
 
+  // Dispatch an action to get user orders
   useEffect(() => {
     dispatch(getUserOrders());
   }, []);

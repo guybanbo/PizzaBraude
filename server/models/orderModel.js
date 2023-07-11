@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Define the order schema
 const orderSchema = mongoose.Schema(
   {
     address: { type: String, require },
@@ -7,10 +7,10 @@ const orderSchema = mongoose.Schema(
     phoneNumber: { type: String, require },
     subtotal: { type: String, require },
     currentUser: { type: Object },
-    cartItems: [],
+    cartItems: [],// Array to store the order items
   },
   {
-    timestamps: true,
+    timestamps: true,// Automatically add timestamp fields (createdAt, updatedAt)
   }
 );
 

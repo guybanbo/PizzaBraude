@@ -4,18 +4,22 @@ import { loginUser } from "../actions/userAction";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 export default function Loginscreen() {
+  // Define state variables for email and password
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  // Retrieve login state
   const loginstate = useSelector((state) => state.loginUserReducer);
   const { loading, error } = loginstate;
   const dispatch = useDispatch();
 
+  // If the currentUser is already stored in localStorage, redirect to the home page
   useEffect(() => {
     if (localStorage.getItem("currentUser")) {
       window.location.href = "/";
     }
   }, []);
 
+  // Dispatch an action to log in the user with provided email and password
   function login() {
     const user = { email, password };
     dispatch(loginUser(user));
