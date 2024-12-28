@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 var db = require("./db");
 
 var MongoUrl =
-  "mongodb+srv://barmalka1419:B0548316212m!@cluster0.fzhtkie.mongodb.net/MyPizza";
+  "mongodb+srv://pizza_owner:Guybanbo123456@cluster0.f6m9i.mongodb.net/MyPizza";
 mongoose.connect(MongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
